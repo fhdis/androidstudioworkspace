@@ -15,13 +15,11 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textSize="18sp"
-
             android:text= "信息" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2px"
-
             android:layout_alignParentBottom="true"/>
     </RelativeLayout>
 
@@ -37,11 +35,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-
             android:drawablePadding="3dp"
-
             android:gravity="center"
-
+            android:drawableTop="@mipmap/ic_menu_home"
             android:text="订单处理"/>
 
         <TextView
@@ -49,11 +45,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-
             android:drawablePadding="3dp"
-
             android:gravity="center"
-
+            android:drawableTop="@mipmap/ic_menu_login"
             android:text="订单查询"/>
 
         <TextView
@@ -61,11 +55,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-
             android:drawablePadding="3dp"
-
             android:gravity="center"
-
+            android:drawableTop="@mipmap/ic_menu_invite"
             android:text="管理"/>
 
         <TextView
@@ -73,11 +65,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-
             android:drawablePadding="3dp"
-
             android:gravity="center"
-
+            android:drawableTop="@mipmap/ic_menu_info_details"
             android:text="设置"/>
 
     </LinearLayout>
@@ -86,7 +76,6 @@
         android:id="@+id/div_tab_bar"
         android:layout_width="match_parent"
         android:layout_height="2px"
-
         android:layout_above="@id/tab_menu"/>
 
     <FrameLayout
