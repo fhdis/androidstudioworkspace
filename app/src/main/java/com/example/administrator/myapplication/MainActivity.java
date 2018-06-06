@@ -25,13 +25,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FouthFragment f4;
 
     private FragmentManager fragmentManager;
-
+    //private FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.linearlayout_exam);
         bindView();
+        FragmentTransaction transaction1 = getFragmentManager().beginTransaction();
+        if(f1==null) {
+            f1 = new FirstFragment();
+            //FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction1.add(R.id.fragment_container, f1);
+        }else {
+            transaction1.show(f1);
+        }
+       transaction1.commit();
        /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
