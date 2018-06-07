@@ -1,17 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="	#FFFFE0">
+    android:orientation="vertical"
 
-
-    <TextView
-        android:id="@+id/txt_content"
+    >
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="呵呵3"
-        android:textColor="#99ff00"
-        android:textSize="20sp"/>
+        android:layout_height="wrap_content"
+        android:inAnimation="@anim/in"
+        android:outAnimation="@anim/out"
+        android:flipInterval="2000"
+        android:autoStart="true"
+        android:visibility="gone"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
 
+        <ViewFlipper
+            android:id="@+id/vf_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoStart="true"
+            android:flipInterval="3000" />
+        <LinearLayout
+            android:id="@+id/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/ic_menu_home"
+            android:id="@+id/product"
+            android:text="商品"
+
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/ic_menu_login"
+            android:id="@+id/appraisal"
+
+            android:text="评价"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@mipmap/ic_menu_invite"
+            android:id="@+id/wallet"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="钱包"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@mipmap/ic_menu_info_details"
+            android:id="@+id/store"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="门店"/>
+    </LinearLayout>
 </LinearLayout>

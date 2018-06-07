@@ -89,6 +89,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.txt_more:
                 selected();
                 tabMore.setSelected(true);
+                if(f4==null){
+                    f4 = new FouthFragment();
+                    transaction.add(R.id.fragment_container,f4);
+                }else{
+                    transaction.show(f4);
+                }
+                break;
+
+            case R.id.txt_poi:
+                selected();
+                tabPoi.setSelected(true);
                 if(f2==null){
                     f2 = new SecondFragment();
                     transaction.add(R.id.fragment_container,f2);
@@ -97,25 +108,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
 
-            case R.id.txt_poi:
+            case R.id.txt_user:
                 selected();
-                tabPoi.setSelected(true);
+                tabUser.setSelected(true);
                 if(f3==null){
                     f3 = new ThirdFragment();
                     transaction.add(R.id.fragment_container,f3);
                 }else{
                     transaction.show(f3);
-                }
-                break;
-
-            case R.id.txt_user:
-                selected();
-                tabUser.setSelected(true);
-                if(f4==null){
-                    f4 = new FouthFragment();
-                    transaction.add(R.id.fragment_container,f4);
-                }else{
-                    transaction.show(f4);
                 }
                 break;
         }

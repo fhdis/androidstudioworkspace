@@ -40,10 +40,16 @@ public class FirstFragment extends Fragment {
         tabLayout = (TabLayout) view.findViewById(R.id.tablayout);
         viewPager = (ViewPager) view.findViewById(R.id.tab_viewpager);
 
-        initView();
+        //initView();
         return view;
     }
 
+    //initView() 放在onActivityCreated方法中
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        initView();
+    }
     private void initView() {
         mTabTitles[0] = "新订单";
         mTabTitles[1] = "配送异常";
