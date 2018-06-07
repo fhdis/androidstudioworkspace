@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 
 public class SecondFragment extends Fragment {
     private String context;

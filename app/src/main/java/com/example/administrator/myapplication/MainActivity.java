@@ -1,7 +1,7 @@
 package com.example.administrator.myapplication;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -10,8 +10,9 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    private TextView topBar;
+   // private TextView topBar;
     private TextView tabDeal;
     private TextView tabPoi;
     private TextView tabMore;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.linearlayout_exam);
         bindView();
-        FragmentTransaction transaction1 = getFragmentManager().beginTransaction();
+        FragmentTransaction transaction1 =getSupportFragmentManager().beginTransaction();
         if(f1==null) {
             f1 = new FirstFragment();
             //FragmentTransaction transaction = getFragmentManager().beginTransaction();
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //UI组件初始化与事件绑定
     private void bindView() {
-        topBar = (TextView)this.findViewById(R.id.txt_top);
+       // topBar = (TextView)this.findViewById(R.id.txt_top);
         tabDeal = (TextView)this.findViewById(R.id.txt_deal);
         tabPoi = (TextView)this.findViewById(R.id.txt_poi);
         tabUser = (TextView)this.findViewById(R.id.txt_user);
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        FragmentTransaction transaction =getSupportFragmentManager().beginTransaction();
         hideAllFragment(transaction);
         switch(v.getId()){
             case R.id.txt_deal:
