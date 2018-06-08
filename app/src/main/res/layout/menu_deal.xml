@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:background="#ffff00">
+
+        <TextView
+            android:id="@+id/txt_new_deal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_menu_new_order"
+            android:text="新订单"/>
+
+        <TextView
+            android:id="@+id/txt_cancel_order"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="1dp"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_menu_cancel_order"
+            android:text="取消订单"
+            />
+
+        <TextView
+            android:id="@+id/txt_service_order"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="1dp"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_menu_service_order"
+            android:text="售后退款"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_printer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/printer"
+        android:layout_below="@id/tab_menu"
+        android:layout_alignRight="@id/tab_menu"
+        android:layout_marginTop="10dp"
+       />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d9d9d9"
+        android:layout_below="@id/txt_printer"
+        android:layout_marginTop="1dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d9d9d9"
+        android:layout_below="@id/tab_menu"
+        />
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/tab_menu"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_menu"
+        >
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f0">
+
+    <LinearLayout
+        android:id="@+id/today"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="今日05/14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="暂无订单" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/yesterday"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/today">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="昨日05/13"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看汇总"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/order"
+        android:layout_below="@+id/yesterday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical"
+        android:background="#ffffff">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/today">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#4"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="尽快送达"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单完成"
+                />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#66ff99"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/today">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="郁月"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="近60天第一次下单"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="江苏省苏州市张家港市张家港经济技术开发区金港大道新丰西路3号
+              （东渡集团西300米舒心公寓）跃虹针织有限公司(1.72km)"
+                />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#66ff99"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17:05 已送达 （骑手：沈军）"
+                android:drawableRight="@mipmap/buttonarrow"
+                />
+            <Button android:id="@+id/btn_oneday"
+                android:layout_height="40dp"
+                android:layout_width="120dp"
+                android:text="展开进度"
+                android:drawableRight="@mipmap/buttonarrow"/>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#66ff99"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3件商品"
+                />
+            <Button
+                android:layout_height="40dp"
+                android:layout_width="120dp"
+                android:text="展开"
+                android:drawableRight="@mipmap/buttonarrow"/>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#66ff99"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已支付  ¥17.6元"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

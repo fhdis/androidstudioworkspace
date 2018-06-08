@@ -20,8 +20,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private FrameLayout ly_content;
 
-    private FirstFragment f1;
-    private SecondFragment f2;
+   // private FirstFragment f1;
+    private MenuDeal f1;
+    private MenuQuery f2;
     private ThirdFragment f3;
     private FouthFragment f4;
 
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bindView();
         FragmentTransaction transaction1 =getSupportFragmentManager().beginTransaction();
         if(f1==null) {
-            f1 = new FirstFragment();
+            f1 = new MenuDeal();
             //FragmentTransaction transaction = getFragmentManager().beginTransaction();
             transaction1.add(R.id.fragment_container, f1);
         }else {
@@ -79,7 +80,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 selected();
                 tabDeal.setSelected(true);
                 if(f1==null){
-                    f1 = new FirstFragment();
+                   // f1 = new FirstFragment();
+                    f1 = new MenuDeal();
                     transaction.add(R.id.fragment_container,f1);
                 }else{
                     transaction.show(f1);
@@ -101,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 selected();
                 tabPoi.setSelected(true);
                 if(f2==null){
-                    f2 = new SecondFragment();
+                    f2 = new MenuQuery();
                     transaction.add(R.id.fragment_container,f2);
                 }else{
                     transaction.show(f2);

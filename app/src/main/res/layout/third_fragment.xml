@@ -83,4 +83,74 @@
             android:gravity="center"
             android:text="门店"/>
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="#d9d9d9"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="今日数据"
+            />
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="更多数据"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="#d9d9d9"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="预计收入"
+            />
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="有效订单"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="#d9d9d9"
+        />
 </LinearLayout>

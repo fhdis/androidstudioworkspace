@@ -17,8 +17,8 @@ public class SecondFragment extends Fragment {
     //private TextView mTextView;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private Fragment[] mFragmentArrays = new Fragment[5];
-    private String[] mTabTitles = new String[5];
+    private Fragment[] mFragmentArrays = new Fragment[4];
+    private String[] mTabTitles = new String[4];
     private android.support.v4.app.FragmentManager  fragmentManager;
     public  SecondFragment(){
 
@@ -39,8 +39,6 @@ public class SecondFragment extends Fragment {
         //mTextView.setText(context);
         tabLayout = (TabLayout) view.findViewById(R.id.tablayout);
         viewPager = (ViewPager) view.findViewById(R.id.tab_viewpager);
-
-
         return view;
     }
     @Override
@@ -55,7 +53,7 @@ public class SecondFragment extends Fragment {
         mTabTitles[1] = "进行中";
         mTabTitles[2] = "已完成";
         mTabTitles[3] = "已取消/退单";
-        mTabTitles[4] = "索赔";
+        //mTabTitles[4] = "索赔";
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         //设置tablayout距离上下左右的距离
         //tab_title.setPadding(20,20,20,20);
@@ -63,7 +61,7 @@ public class SecondFragment extends Fragment {
         mFragmentArrays[1] = SecondTabFragment.newInstance();
         mFragmentArrays[2] = SecondTabFragment.newInstance();
         mFragmentArrays[3] = SecondTabFragment.newInstance();
-        mFragmentArrays[4] = SecondTabFragment.newInstance();
+       // mFragmentArrays[4] = SecondTabFragment.newInstance();
         fragmentManager = getChildFragmentManager();
         PagerAdapter pagerAdapter = new SecondFragment.MyViewPagerAdapter(fragmentManager);
         viewPager.setAdapter(pagerAdapter);
