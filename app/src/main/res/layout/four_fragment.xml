@@ -25,31 +25,12 @@
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="1dp"
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:background="#d9d9d9"
         />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="26dp"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="通知中心"
-            android:drawablePadding="3dp"
-            />
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:background="#d9d9d9"
-        />
+
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -60,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="接单设置"
+            android:text="打印机设置"
             />
         <TextView
             android:layout_width="match_parent"
@@ -73,65 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="微信接单助手"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:background="#d9d9d9"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawablePadding="3dp"
-            android:gravity="center"
-            android:text="打印机设置"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:background="#d9d9d9"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="通知与提示音设置"/>
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:background="#d9d9d9"
-        />
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawablePadding="3dp"
-            android:gravity="center"
-            android:text="帮助与反馈"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:background="#d9d9d9"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="在线客服"/>
+            android:text="呼叫客服"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -143,51 +66,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawablePadding="3dp"
-            android:gravity="center"
-            android:text="呼叫客服        021-80203777"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:background="#d9d9d9"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="市场经理"/>
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:background="#d9d9d9"
-        />
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawablePadding="3dp"
-            android:gravity="center"
-            android:text="账户与安全"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:background="#d9d9d9"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="规则中心"/>
         <TextView
@@ -200,58 +78,39 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawablePadding="3dp"
             android:gravity="center"
             android:text="关于我们"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="#d9d9d9"/>
     </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:background="#d9d9d9"
-        />
+
     <LinearLayout
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_alignParentBottom="true">
+        android:gravity="center|center_horizontal|center_vertical|bottom"
+      >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:gravity="center"
+            android:background="#d9d9d9"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawablePadding="3dp"
             android:gravity="center"
-            android:text="检测更新"
-            />
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:background="#d9d9d9"
-        />
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true">
+            android:text="退出登录"/>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawablePadding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
             android:gravity="center"
-            android:text="退出登录"
+            android:background="#d9d9d9"
             />
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="上海拉扎斯信息科技有限公司@2018 Rajax Network Technology Co.,Ltd"
-        android:gravity="center"
-        android:background="#d9d9d9"
-        />
 </LinearLayout>
 </ScrollView>

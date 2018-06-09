@@ -1,6 +1,7 @@
 package com.example.administrator.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,13 +10,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-public class ThirdFragment extends Fragment implements View.OnTouchListener{
+public class ThirdFragment extends Fragment implements View.OnTouchListener {
    // private ViewFlipper viewFlipper;
     private ViewFlipper flipperBanner;
     private int[] imagsList = {R.mipmap.gundong_1,R.mipmap.gundong_2,R.mipmap.gundong_3,R.mipmap.gundong_4};
@@ -23,13 +25,15 @@ public class ThirdFragment extends Fragment implements View.OnTouchListener{
     private float x1 = 0;
     private Context  thiscontext;
 
-    private TextView product;
-    private TextView appraisal;
-    private TextView wallet;
-    private TextView store;
+    private Button product;
+    private Button wallet;
+    private Button store;
+
+    private Context context;
     public  ThirdFragment(){
 
     }
+
 
     @Nullable
     @Override
@@ -39,37 +43,16 @@ public class ThirdFragment extends Fragment implements View.OnTouchListener{
         //viewFlipper = ((ViewFlipper)view.findViewById(R.id.viewFlipper));
         flipperBanner = ((ViewFlipper)view.findViewById(R.id.vf_banner));
         linearLayout = ((LinearLayout)view.findViewById(R.id.point));
+        product = view.findViewById(R.id.product);
+        wallet = view.findViewById(R.id.wallet);
+        store = view.findViewById(R.id.store);
+        context = view.getContext();
         return view;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        //这里我建了个Ness类  模拟从网络上获取数据 并展示
-        /*final List<News> newsList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            News news = new News();
-            news.setFirstNews("我是第一行第" + i + "条数据");
-            news.setTwoNews("我是第二行第" + i + "条数据");
-            newsList.add(news);
-        }
-
-        for (News news : newsList) {
-            //创建试图
-            LinearLayout linearLayout = new LinearLayout(thiscontext);
-            linearLayout.setOrientation(LinearLayout.VERTICAL);
-            linearLayout.setPadding(10,10,10,10);
-            TextView textView1 = new TextView(thiscontext);
-            TextView textView2 = new TextView(thiscontext);
-            textView1.setText(news.getFirstNews());
-            textView2.setText(news.getTwoNews());
-            linearLayout.addView(textView1);
-            linearLayout.addView(textView2);
-            //通过addView将试图添加进去(有几个试图就必须添加几个，否则无法展示)
-            viewFlipper.addView(linearLayout);
-        }*/
-
-
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(20,20);
         params.leftMargin = 10;
         //图片资源
@@ -100,7 +83,26 @@ public class ThirdFragment extends Fragment implements View.OnTouchListener{
         flipperBanner.getOutAnimation().setAnimationListener(animationListener);
 
         flipperBanner.setOnTouchListener(this);
+        product.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,ManageProduct.class);
+               // intent.setAction("com.google.product");
+                startActivity(intent);
+            }
+        });
+        wallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
+        store.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     Animation.AnimationListener animationListener = new Animation.AnimationListener() {

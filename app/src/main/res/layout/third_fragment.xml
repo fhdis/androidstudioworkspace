@@ -16,11 +16,63 @@
         android:autoStart="true"
         android:visibility="gone"
         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="店铺管理"
+            android:background="#ffff00"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:drawableTop="@mipmap/ic_menu_home"
+            android:id="@+id/product"
+            android:text="商品"
+            android:background="#ffffff"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:drawableTop="@mipmap/ic_menu_login"
+            android:id="@+id/wallet"
+            android:text="钱包"
+            android:background="#ffffff"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@mipmap/ic_menu_invite"
+            android:id="@+id/store"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="门店"
+            android:background="#ffffff"/>
+    </LinearLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
         >
-
         <ViewFlipper
             android:id="@+id/vf_banner"
             android:layout_width="match_parent"
@@ -37,52 +89,6 @@
             android:orientation="horizontal"/>
     </FrameLayout>
 
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawablePadding="3dp"
-            android:gravity="center"
-            android:drawableTop="@mipmap/ic_menu_home"
-            android:id="@+id/product"
-            android:text="商品"
-
-            />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawablePadding="3dp"
-            android:gravity="center"
-            android:drawableTop="@mipmap/ic_menu_login"
-            android:id="@+id/appraisal"
-
-            android:text="评价"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:drawableTop="@mipmap/ic_menu_invite"
-            android:id="@+id/wallet"
-            android:layout_weight="1"
-            android:drawablePadding="3dp"
-            android:gravity="center"
-            android:text="钱包"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:drawableTop="@mipmap/ic_menu_info_details"
-            android:id="@+id/store"
-            android:layout_weight="1"
-            android:drawablePadding="3dp"
-            android:gravity="center"
-            android:text="门店"/>
-    </LinearLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="10dp"

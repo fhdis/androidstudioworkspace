@@ -53,10 +53,9 @@
 
     <LinearLayout
         android:id="@+id/tab_date"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#ffffff"
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal" >
 
