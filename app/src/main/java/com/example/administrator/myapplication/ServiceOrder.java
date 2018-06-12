@@ -11,11 +11,11 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewOrder extends Fragment {
-     private ListView list_order_deal;
-     private List<OrderDealModel> mDatas;
-     private OrderDealAdapter  orderDealAdapter;
-     private Context context;
+public class ServiceOrder extends Fragment {
+    private ListView list_order_deal;
+    private List<OrderDealModel> mDatas;
+    private OrderDealAdapter  orderDealAdapter;
+    private Context context;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //无订单显示页面
@@ -34,25 +34,18 @@ public class NewOrder extends Fragment {
     }
 
     //方法；初始化Data
-     private void initData() {
+    private void initData() {
         mDatas = new ArrayList<OrderDealModel>();
 
         //将数据装到集合中去
-         OrderDealModel bean = new OrderDealModel("1", "建议14：07前出餐", "顾客：黄鹏(先生)", "确认出餐");
-         mDatas.add(bean);
+        OrderDealModel bean = new OrderDealModel("1", "建议14：07前出餐", "顾客：钱先生(先生)", "售后退款");
+        mDatas.add(bean);
 
-         bean = new OrderDealModel("2", "建议13：07前出餐", "顾客：李小姐(女士)", "确认出餐");
-         mDatas.add(bean);
+        mDatas.add(bean);
 
-         bean = new OrderDealModel("3", "建议16：30前出餐", "顾客：王先生(先生)", "确认出餐");
-         mDatas.add(bean);
+        //为数据绑定适配器
+        orderDealAdapter = new OrderDealAdapter(context,mDatas);
 
-         bean = new OrderDealModel("4", "建议15：25前出餐", "顾客：胡小姐(女士)", "确认出餐");
-         mDatas.add(bean);
-
-         //为数据绑定适配器
-         orderDealAdapter = new OrderDealAdapter(context,mDatas);
-
-         list_order_deal.setAdapter(orderDealAdapter);
-         }
+        list_order_deal.setAdapter(orderDealAdapter);
+    }
 }

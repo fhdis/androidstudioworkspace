@@ -71,17 +71,19 @@
             android:text="选择日期"
             android:drawableRight="@mipmap/buttonarrow"/>
     </LinearLayout>
+
     <View
         android:id="@+id/div_tab_bar"
         android:layout_width="match_parent"
-        android:layout_height="2px"
-        android:layout_above="@id/tab_menu"/>
+        android:layout_height="12px"
+        android:layout_below="@id/tab_menu"
+        android:background="#ff3333"/>
 
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tab_menu"
+        android:layout_below="@id/div_tab_bar"
         >
     </FrameLayout>
 

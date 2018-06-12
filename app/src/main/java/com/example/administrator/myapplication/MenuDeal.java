@@ -16,8 +16,8 @@ public class MenuDeal extends Fragment implements View.OnClickListener{
     private FrameLayout ly_content;
 
     private NewOrder f1;
-    private SecondFragment f2;
-    private ThirdFragment f3;
+    private CancelOrder f2;
+    private ServiceOrder f3;
 
     public  MenuDeal(){
 
@@ -75,7 +75,7 @@ public class MenuDeal extends Fragment implements View.OnClickListener{
                 selected();
                 txt_cancel_order.setSelected(true);
                 if(f2==null){
-                    f2 = new SecondFragment();
+                    f2 = new CancelOrder();
                     transaction.add(R.id.fragment_container,f2);
                 }else{
                     transaction.show(f2);
@@ -86,7 +86,7 @@ public class MenuDeal extends Fragment implements View.OnClickListener{
                 selected();
                 txt_service_order.setSelected(true);
                 if(f3==null){
-                    f3 = new ThirdFragment();
+                    f3 = new ServiceOrder();
                     transaction.add(R.id.fragment_container,f3);
                 }else{
                     transaction.show(f3);

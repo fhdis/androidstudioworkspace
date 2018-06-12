@@ -33,9 +33,9 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
 
     //private AllOrder f1;
     private AllOrder allOrder;
-    private SecondFragment f2;
-    private ThirdFragment f3;
-    private FouthFragment f4;
+    private OngoingOrder ongoingOrder;
+    private FinishOrder finishOrder;
+    private HaveCanceledOrder  haveCanceledOrder;
 
     private PopupWindow popupWindow;
     private View popview;
@@ -87,14 +87,14 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
         if(allOrder!=null){
             transaction.hide(allOrder);
         }
-        if(f2!=null){
-            transaction.hide(f2);
+        if(ongoingOrder!=null){
+            transaction.hide(ongoingOrder);
         }
-        if(f3!=null){
-            transaction.hide(f3);
+        if(finishOrder!=null){
+            transaction.hide(finishOrder);
         }
-        if(f4!=null){
-            transaction.hide(f4);
+        if(haveCanceledOrder!=null){
+            transaction.hide(haveCanceledOrder);
         }
     }
 
@@ -112,39 +112,53 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
         hideAllFragment(transaction);
      switch (v.getId()){
          case R.id.btn_recent:
-             //传入今天和昨天的日期和，类似用户名的参数，获取订单信息
-             /*switch (v.getId()){
-                 case R.id.txt_all_order:
-                     selected();
-                     txt_all_order.setSelected(true);
-                     if(allOrder==null){
-                         allOrder = new AllOrder();
-                         transaction.add(R.id.fragment_container,allOrder);
-                     }else{
-                         transaction.show(allOrder);
-                     }
-                     break;
-                 case R.id.txt_ongoing_order:
-                     break;
-                 case R.id.txt_finish_order:
-                     break;
-                 case R.id.txt_cancel_order:
-                     break;
-             }*/
              break;
          case R.id.btn_oneday:
-             showWindow(v);
-             //传入指定的日期和，类似用户名的参数，获取订单信息
-             /*switch (v.getId()){
-                 case R.id.txt_all_order:
-                     break;
-                 case R.id.txt_ongoing_order:
-                     break;
-                 case R.id.txt_finish_order:
-                     break;
-                 case R.id.txt_cancel_order:
-                     break;
-             }*/
+             //showWindow(v);
+             break;
+         case R.id.txt_all_order:
+             selected();
+             txt_all_order.setSelected(true);
+             if(allOrder==null){
+                 // f1 = new FirstFragment();
+                 allOrder = new AllOrder();
+                 transaction.add(R.id.fragment_container,allOrder);
+             }else{
+                 transaction.show(allOrder);
+             }
+             break;
+         case R.id.txt_ongoing_order:
+             selected();
+             txt_ongoing_order.setSelected(true);
+             if(ongoingOrder==null){
+                 // f1 = new FirstFragment();
+                 ongoingOrder = new OngoingOrder();
+                 transaction.add(R.id.fragment_container,ongoingOrder);
+             }else{
+                 transaction.show(ongoingOrder);
+             }
+             break;
+         case R.id.txt_finish_order:
+             selected();
+             txt_finish_order.setSelected(true);
+             if(finishOrder==null){
+                 // f1 = new FirstFragment();
+                 finishOrder = new FinishOrder();
+                 transaction.add(R.id.fragment_container,finishOrder);
+             }else{
+                 transaction.show(finishOrder);
+             }
+             break;
+         case R.id.txt_cancel_order:
+             selected();
+             txt_cancel_order.setSelected(true);
+             if(haveCanceledOrder==null){
+                 // f1 = new FirstFragment();
+                 haveCanceledOrder = new HaveCanceledOrder();
+                 transaction.add(R.id.fragment_container,haveCanceledOrder);
+             }else{
+                 transaction.show(haveCanceledOrder);
+             }
              break;
      }
     }

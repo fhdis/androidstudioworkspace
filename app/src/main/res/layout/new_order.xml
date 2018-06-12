@@ -4,20 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:gravity="center"
    >
-
-        <TextView
-            android:id="@+id/point"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal|bottom"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal"
-            android:drawableTop="@mipmap/no_order"
-            android:text="暂无新订单"
-            android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="10dp"
+        android:drawableTop="@mipmap/no_order"
+        android:gravity="center|bottom"
+        android:orientation="horizontal"
+        android:text="暂无新订单"
+        android:textSize="20sp"
+        android:textStyle="bold" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,5 +25,6 @@
         android:layout_marginBottom="10dp"
         android:orientation="horizontal"
         android:text="你可以通过活动或店铺推广提升订单量"
+        android:textSize="15sp"
        />
 </LinearLayout>

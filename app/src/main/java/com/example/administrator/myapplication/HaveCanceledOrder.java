@@ -6,9 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class OngoingOrder extends Fragment implements View.OnClickListener{
+public class HaveCanceledOrder extends Fragment implements View.OnClickListener{
 
-    public  OngoingOrder(){
+    public  HaveCanceledOrder(){
 
     }
     @Override
