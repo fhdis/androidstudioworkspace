@@ -29,13 +29,13 @@
             android:drawablePadding="3dp"
             android:gravity="center"
             android:text="店铺管理"
-            android:background="#ffff00"
+            android:background="#FACF1C"
             />
     </LinearLayout>
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="118dp"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:background="#ffffff">
@@ -44,7 +44,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:drawableTop="@mipmap/ic_menu_home"
+            android:drawableTop="@drawable/ic_menu_manage_product"
             android:id="@+id/product"
             android:text="商品"
             android:background="#ffffff"
@@ -54,14 +54,14 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:drawableTop="@mipmap/ic_menu_login"
+            android:drawableTop="@drawable/ic_menu_manage_wallet"
             android:id="@+id/wallet"
             android:text="钱包"
             android:background="#ffffff"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:drawableTop="@mipmap/ic_menu_invite"
+            android:drawableTop="@drawable/ic_menu_manage_store"
             android:id="@+id/store"
             android:layout_weight="1"
             android:gravity="center"
@@ -91,7 +91,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="1dp"
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:background="#d9d9d9"
@@ -117,7 +117,8 @@
             android:drawablePadding="3dp"
             android:gravity="center"
             android:layout_marginRight="10dp"
-            android:text="更多数据"/>
+            android:text="更多数据"
+            android:drawableRight="@mipmap/ic_menu_left"/>
     </LinearLayout>
 
     <TextView
@@ -152,11 +153,4 @@
             android:text="有效订单"/>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:background="#d9d9d9"
-        />
 </LinearLayout>

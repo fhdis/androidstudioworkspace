@@ -94,13 +94,17 @@ public class ThirdFragment extends Fragment implements View.OnTouchListener {
         wallet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(context,ManageWallet.class);
+                // intent.setAction("com.google.product");
+                startActivity(intent);
             }
         });
         store.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(context,ManageStore.class);
+                // intent.setAction("com.google.product");
+                startActivity(intent);
             }
         });
     }

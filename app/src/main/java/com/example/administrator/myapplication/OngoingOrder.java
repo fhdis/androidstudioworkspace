@@ -18,7 +18,7 @@ public class OngoingOrder extends Fragment implements View.OnClickListener{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.all_order,container,false);
+        View view = inflater.inflate(R.layout.third_fragment,container,false);
         return view;
     }
 }

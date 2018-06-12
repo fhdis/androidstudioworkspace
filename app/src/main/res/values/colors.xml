@@ -8,4 +8,6 @@
     <color name="green">#1cb9a0</color>
     <color name="green_dark">#44bd00</color>
     <color name="textcolor">#333333</color>
+    <color name="gray">#808080</color><!--灰色 -->
+    <color name="whitesmoke">#F5F5F5</color><!--烟白色 -->
 </resources>
