@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
+import android.util.Log;
 
 public class ThirdFragment extends Fragment implements View.OnTouchListener {
    // private ViewFlipper viewFlipper;
@@ -47,12 +48,14 @@ public class ThirdFragment extends Fragment implements View.OnTouchListener {
         wallet = view.findViewById(R.id.wallet);
         store = view.findViewById(R.id.store);
         context = view.getContext();
+        Log.d("BBBB","ThirdFragment="+"onCreateView");
         return view;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        Log.d("BBBB","ThirdFragment="+"onActivityCreated");
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(20,20);
         params.leftMargin = 10;
         //图片资源

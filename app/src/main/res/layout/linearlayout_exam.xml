@@ -14,28 +14,30 @@
     <LinearLayout
         android:id="@+id/tab_menu"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/txt_deal"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="55dp"
             android:layout_weight="1"
-            android:drawablePadding="-20dp"
+            android:drawablePadding="-10dp"
+            android:layout_marginTop="5dp"
             android:drawableTop="@drawable/ic_menu_deal"
             android:gravity="center"
             android:text="订单处理"
-            android:textSize="10sp"
+            android:textSize="12sp"
             android:selectAllOnFocus="true"/>
 
         <TextView
             android:id="@+id/txt_poi"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="55dp"
             android:layout_weight="1"
-            android:drawablePadding="-20dp"
+            android:drawablePadding="-10dp"
+            android:layout_marginTop="5dp"
             android:drawableTop="@drawable/ic_menu_query"
             android:gravity="center"
             android:text="订单查询"
@@ -44,9 +46,10 @@
         <TextView
             android:id="@+id/txt_user"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="55dp"
             android:layout_weight="1"
-            android:drawablePadding="-20dp"
+            android:drawablePadding="-10dp"
+            android:layout_marginTop="5dp"
             android:drawableTop="@drawable/ic_menu_manage"
             android:gravity="center"
             android:text="店铺管理"
@@ -55,9 +58,10 @@
         <TextView
             android:id="@+id/txt_more"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="55dp"
             android:layout_weight="1"
-            android:drawablePadding="-20dp"
+            android:drawablePadding="-10dp"
+            android:layout_marginTop="5dp"
             android:drawableTop="@drawable/ic_menu_setting"
             android:gravity="center"
             android:text="设置"

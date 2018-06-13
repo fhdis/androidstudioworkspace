@@ -1,6 +1,8 @@
 package com.example.administrator.myapplication;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
@@ -12,17 +14,24 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.util.Log;
 
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
+import android.view.ViewGroup.LayoutParams;
 
 public class MenuQuery extends Fragment implements View.OnClickListener{
     private TextView txt_all_order;
@@ -32,8 +41,8 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
 
     private FrameLayout ly_content;
 
-    private Button btn_recent;
-    private Button btn_oneday;
+    private RadioButton btn_recent;
+    private RadioButton btn_oneday;
 
     //private AllOrder f1;
     private AllOrder allOrder;
@@ -48,6 +57,10 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
     private View popview;
     private DatePicker datePicker;
     public static int requestCode = 0;
+    private Dialog allMsg;
+    // Dialog的布局View
+    private View allMsgView;
+    private Context thiscontext;
     public  MenuQuery(){
 
     }
@@ -61,8 +74,11 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
         txt_finish_order = (TextView)view.findViewById(R.id.txt_finish_order);
         txt_cancel_order = (TextView)view.findViewById(R.id.txt_cancel_order);
         ly_content = (FrameLayout)view.findViewById(R.id.fragment_container);
-        btn_recent = (Button)view.findViewById(R.id.btn_recent);
-        btn_oneday = (Button)view.findViewById(R.id.btn_oneday);
+        btn_recent = (RadioButton)view.findViewById(R.id.btn_recent);
+        btn_oneday = (RadioButton)view.findViewById(R.id.btn_oneday);
+        Log.d("BBBB","MenuQuery="+"onCreateView");
+        thiscontext = view.getContext();
+        init();
         return view;
     }
 
@@ -77,6 +93,7 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
             //FragmentTransaction transaction = getFragmentManager().beginTransaction();
             transaction1.add(R.id.fragment_container, allOrder);
         }
+        Log.d("BBBB","MenuQuery="+"onActivityCreated");
         transaction1.commit();
         btn_recent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +113,7 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
         btn_oneday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showWindow(view);
+                show(view);
             }
         });
     }
@@ -224,7 +241,7 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
         transaction.commit();
     }
 
-    private void showWindow(View parent) {
+  /*  private void showWindow(View parent) {
             //popupWindow = new PopupWindow();
             LayoutInflater layoutInflater = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             popview = layoutInflater.inflate(R.layout.calendar_popwindow, null);
@@ -250,7 +267,8 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
                 }
 
             });*/
-           popupWindow = new PopupWindow(popview, 500, 350);
+          /* WindowManager windowManager = (WindowManager) parent.getContext().getSystemService(Context.WINDOW_SERVICE);
+           popupWindow = new PopupWindow(popview, windowManager.getDefaultDisplay().getWidth(), windowManager.getDefaultDisplay().getWidth()/2);
         // 使其聚集
             popupWindow.setFocusable(true);
             // 设置允许在外点击消失
@@ -258,7 +276,7 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
 
             // 这个是为了点击“返回Back”也能使其消失，并且并不会影响你的背景
             popupWindow.setBackgroundDrawable(new BitmapDrawable());
-            WindowManager windowManager = (WindowManager) parent.getContext().getSystemService(Context.WINDOW_SERVICE);
+            //WindowManager windowManager = (WindowManager) parent.getContext().getSystemService(Context.WINDOW_SERVICE);
             // 显示的位置为:屏幕的宽度的一半-PopupWindow的高度的一半
             int xPos = windowManager.getDefaultDisplay().getWidth() / 2
                     - popupWindow.getWidth() / 2;
@@ -266,5 +284,29 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
 
            //popupWindow.showAsDropDown(parent, xPos, 0);
              popupWindow.showAsDropDown(popview);
+    }*/
+
+    private void init()
+    {
+        // 通过LayoutInflater找到改布局
+        allMsgView = (RelativeLayout) LayoutInflater.from(thiscontext).inflate(R.layout.calendar_popwindow, null);
+        // 创建Dialog
+        allMsg = new AlertDialog.Builder(thiscontext).create();
+        // 设置点击外边缘不消失，2.x的应该是默认不消失的
+        allMsg.setCanceledOnTouchOutside(false);
+        Window win = allMsg.getWindow();
+        WindowManager.LayoutParams wmParams = new WindowManager.LayoutParams();
+       /* LayoutParams params = new LayoutParams(0,0);
+        params.x = -80;//设置x坐标
+        params.y = -60;//设置y坐标*/
+        wmParams.x = -80;// 以屏幕左上角为原点，设置x、y初始值
+        wmParams.y = -60;
+        win.setAttributes(wmParams);
+    }
+    public void show(View v)
+    {
+        // 两句的顺序不能调换
+        allMsg.show();
+        allMsg.getWindow().setContentView((RelativeLayout) allMsgView);
     }
 }

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.util.Log;
 
 public class MenuDeal extends Fragment implements View.OnClickListener{
     private TextView txt_new_deal;
@@ -30,6 +31,7 @@ public class MenuDeal extends Fragment implements View.OnClickListener{
         txt_cancel_order = (TextView)view.findViewById(R.id.txt_cancel_order);
         txt_service_order = (TextView)view.findViewById(R.id.txt_service_order);
         ly_content = (FrameLayout)view.findViewById(R.id.fragment_container);
+        Log.d("BBBB","MenuDeal="+"onCreate");
         return view;
     }
 
@@ -39,12 +41,14 @@ public class MenuDeal extends Fragment implements View.OnClickListener{
         bindView();
         FragmentTransaction transaction1 =getChildFragmentManager().beginTransaction();
         if(f1==null) {
+            txt_new_deal.setSelected(true);
             f1 = new NewOrder();
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
             transaction1.add(R.id.fragment_container, f1);
         }else {
             transaction1.show(f1);
         }
+        Log.d("BBBB","MenuDeal="+"onActivityCreated");
         transaction1.commit();
     }
 

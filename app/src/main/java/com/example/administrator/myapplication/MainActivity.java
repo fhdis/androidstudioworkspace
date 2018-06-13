@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.util.Log;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -34,14 +35,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.linearlayout_exam);
         bindView();
+
         FragmentTransaction transaction1 =getSupportFragmentManager().beginTransaction();
         if(f1==null) {
+            tabDeal.setSelected(true);
             f1 = new MenuDeal();
             //FragmentTransaction transaction = getFragmentManager().beginTransaction();
             transaction1.add(R.id.fragment_container, f1);
         }else {
             transaction1.show(f1);
         }
+        Log.d("BBBB","MainActivity="+"onCreate");
        transaction1.commit();
        /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
