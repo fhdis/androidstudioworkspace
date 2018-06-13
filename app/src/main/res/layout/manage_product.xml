@@ -48,7 +48,7 @@ android:layout_height="match_parent">
         android:layout_height="60dp"
         android:layout_weight="1"
         android:drawablePadding="1dp"
-        android:drawableLeft="@drawable/ic_menu_deal"
+        android:drawableLeft="@mipmap/ic_menu_manage_product_ma"
         android:text="管理分类"/>
 
     <Button
@@ -57,7 +57,7 @@ android:layout_height="match_parent">
         android:layout_height="60dp"
         android:layout_weight="1"
         android:drawablePadding="1dp"
-        android:drawableLeft="@drawable/ic_menu_query"
+        android:drawableLeft="@mipmap/ic_menu_manage_product_sort"
         android:text="商品排序"/>
 
     <Button
@@ -66,7 +66,7 @@ android:layout_height="match_parent">
         android:layout_height="60dp"
         android:layout_weight="1"
         android:drawablePadding="1dp"
-        android:drawableLeft="@drawable/ic_menu_manage"
+        android:drawableLeft="@mipmap/ic_menu_manage_product_add"
         android:text="新建商品"/>
 </LinearLayout>
 </RelativeLayout>

@@ -32,7 +32,19 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".ManageYinhangka"
+        android:name=".ManageYinhangka"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+        <activity
+            android:name=".ManageStoreInfomation"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ManageStoreCenter"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ManageStoreSetting"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

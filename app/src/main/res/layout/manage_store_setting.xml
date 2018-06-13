@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearlayout">
+        <android.support.v7.widget.Toolbar
+            android:id= "@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FACF1C">
+        </android.support.v7.widget.Toolbar>
+        <TextView
+            android:id="@+id/tx_yingyeshezhi"
+            android:drawablePadding="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="店名             瑞乐林生鲜（暨阳中路店）"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tx_jibenxinxi"
+            android:drawablePadding="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址张家港市杨舍镇云盘一村25幢105室"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tx_renzhengzhongxin"
+            android:drawablePadding="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="店铺公告                        未填写"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:drawablePadding="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="店铺简介                        未填写"
+            android:textSize="20sp"/>
+        <TextView
+            android:drawablePadding="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="店铺照片                 已上传3张"
+            android:textSize="20sp"/>
+        <TextView
+            android:drawablePadding="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发票                        不提供发票"
+            android:textSize="20sp"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -17,10 +17,9 @@
             android:layout_width="10dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:drawablePadding="3dp"
             android:gravity="center"
-            android:layout_marginLeft="10dp"
             android:text="瑞乐林生鲜（暨阳中路店）"
+            android:background="#FACF1C"
             />
     </LinearLayout>
     <TextView
@@ -38,6 +37,9 @@
         android:orientation="vertical"
         android:layout_alignParentBottom="true">
         <TextView
+            android:drawableLeft="@mipmap/printer"
+            android:drawableRight="@mipmap/ic_menu_left"
+            android:drawablePadding="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -51,6 +53,9 @@
             android:background="#d9d9d9"
             />
         <TextView
+            android:drawableLeft="@mipmap/settings_tel"
+            android:drawableRight="@mipmap/ic_menu_left"
+            android:drawablePadding="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -63,9 +68,11 @@
             android:background="#d9d9d9"
             />
         <TextView
+            android:drawableLeft="@mipmap/settings_guize"
+            android:drawableRight="@mipmap/ic_menu_left"
+            android:drawablePadding="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawablePadding="3dp"
             android:gravity="center"
             android:text="规则中心"/>
         <TextView
@@ -76,6 +83,9 @@
             android:background="#d9d9d9"
             />
         <TextView
+            android:drawableLeft="@mipmap/settings_aboutus"
+            android:drawableRight="@mipmap/ic_menu_left"
+            android:drawablePadding="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -89,7 +99,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center|center_horizontal|center_vertical|bottom"
@@ -97,18 +107,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:gravity="center"
+            android:gravity="bottom"
             android:background="#d9d9d9"
             />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="bottom"
             android:text="退出登录"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:gravity="center"
+            android:gravity="bottom"
             android:background="#d9d9d9"
             />
     </LinearLayout>
