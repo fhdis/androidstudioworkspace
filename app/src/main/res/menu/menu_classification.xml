@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.administrator.myapplication.EditingClassification">
+    <item
+        android:id="@+id/action_search"
+        android:title="保存"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_setting"
+        android:icon="@mipmap/ic_menu_home"
+        android:title="设置"
+        app:showAsAction="never"/>
+    />
+</menu>

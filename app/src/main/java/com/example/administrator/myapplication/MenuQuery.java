@@ -90,6 +90,7 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
         FragmentTransaction transaction1 =getChildFragmentManager().beginTransaction();
         if(allOrder==null) {
             allOrder = new AllOrder();
+            txt_all_order.setSelected(true);
             //FragmentTransaction transaction = getFragmentManager().beginTransaction();
             transaction1.add(R.id.fragment_container, allOrder);
         }

@@ -58,6 +58,32 @@ public class ManageProduct extends AppCompatActivity {
         initData();
         initView();
         initListener();
+        bt_manage_classify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ManageProduct.this,ManagementClassification.class);
+                // intent.setAction("com.google.product");
+                startActivity(intent);
+            }
+        });
+
+        bt_manage_sort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ManageProduct.this,ManagementClassification.class);
+                // intent.setAction("com.google.product");
+                startActivity(intent);
+            }
+        });
+
+        bt_mamage_new.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ManageProduct.this,NewGoods.class);
+                // intent.setAction("com.google.product");
+                startActivity(intent);
+            }
+        });
     }
 
     private void initData() {

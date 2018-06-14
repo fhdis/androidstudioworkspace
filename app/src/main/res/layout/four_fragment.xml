@@ -37,11 +37,14 @@
         android:orientation="vertical"
         android:layout_alignParentBottom="true">
         <TextView
+            android:id="@+id/tx_dayinji"
             android:drawableLeft="@mipmap/printer"
-            android:drawableRight="@mipmap/ic_menu_left"
-            android:drawablePadding="40dp"
+            android:drawableRight="@mipmap/ic_menu_jiantou"
+            android:drawablePadding="90dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:gravity="center"
             android:text="打印机设置"
             />
@@ -53,9 +56,12 @@
             android:background="#d9d9d9"
             />
         <TextView
+            android:id="@+id/tx_hujiaokefu"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:drawableLeft="@mipmap/settings_tel"
-            android:drawableRight="@mipmap/ic_menu_left"
-            android:drawablePadding="40dp"
+            android:drawableRight="@mipmap/ic_menu_jiantou"
+            android:drawablePadding="100dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -68,9 +74,12 @@
             android:background="#d9d9d9"
             />
         <TextView
+            android:id="@+id/tx_guizezhongxin"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:drawableLeft="@mipmap/settings_guize"
-            android:drawableRight="@mipmap/ic_menu_left"
-            android:drawablePadding="40dp"
+            android:drawableRight="@mipmap/ic_menu_jiantou"
+            android:drawablePadding="100dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -83,9 +92,12 @@
             android:background="#d9d9d9"
             />
         <TextView
+            android:id="@+id/tx_aboutus"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:drawableLeft="@mipmap/settings_aboutus"
-            android:drawableRight="@mipmap/ic_menu_left"
-            android:drawablePadding="40dp"
+            android:drawableRight="@mipmap/ic_menu_jiantou"
+            android:drawablePadding="100dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -102,23 +114,23 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center|center_horizontal|center_vertical|bottom"
+        android:layout_marginTop="230dp"
       >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:gravity="bottom"
             android:background="#d9d9d9"
             />
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:text="退出登录"/>
+            android:text="退出登录"
+            android:gravity="center"
+            android:textStyle ="bold"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:gravity="bottom"
             android:background="#d9d9d9"
             />
     </LinearLayout>

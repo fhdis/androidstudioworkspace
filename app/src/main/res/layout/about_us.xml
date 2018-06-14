@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearlayout">
+        <android.support.v7.widget.Toolbar
+            android:id= "@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FACF1C">
+        </android.support.v7.widget.Toolbar>
+        <ImageView
+            android:layout_marginTop="100dp"
+            android:drawablePadding="80dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            android:layout_height="100dp"
+            android:background="@mipmap/logo"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tx_add_printer"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="食纷生活商家版"
+            android:textSize="15sp"/>
+        <TextView
+            android:drawablePadding="100dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系统版本V7.5.8"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:drawablePadding="100dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="宇风生信息科技有限公司"
+            android:textSize="10sp"/>
+        <TextView
+            android:drawablePadding="100dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018XXXXXXXXXXXXXXX"
+            android:textSize="10sp"/>
+
+    </LinearLayout>
+</RelativeLayout>

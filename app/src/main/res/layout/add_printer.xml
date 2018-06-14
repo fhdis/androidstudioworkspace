@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearlayout">
+        <android.support.v7.widget.Toolbar
+            android:id= "@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FACF1C">
+        </android.support.v7.widget.Toolbar>
+        <ImageView
+            android:id="@+id/tx_yingyeshezhi"
+            android:layout_marginLeft="140dp"
+            android:layout_marginRight="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bluetooth"
+            />
+
+        <TextView
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="40dp"
+            android:id="@+id/tx_jibenxinxi"
+            android:drawablePadding="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蓝牙功能已关闭"
+            android:textSize="20sp"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="40dp"
+            android:drawablePadding="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击开启蓝牙功能"
+            android:textSize="15sp"
+            android:background="@drawable/bt_shape"/>
+
+    </LinearLayout>
+</RelativeLayout>
