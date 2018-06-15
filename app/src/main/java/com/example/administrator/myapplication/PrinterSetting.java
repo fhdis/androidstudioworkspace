@@ -15,6 +15,8 @@ public class PrinterSetting extends AppCompatActivity {
         setContentView(R.layout.printer_setting);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("打印机设置");
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
         tx_add_printer = (TextView)findViewById(R.id.tx_add_printer);
         tx_add_printer.setOnClickListener(new View.OnClickListener() {
             @Override

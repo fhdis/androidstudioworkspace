@@ -20,7 +20,9 @@ public class NewGoods  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.newgoods);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("新建商品            保存");
+        toolbar.setTitle("新建商品");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
         tv_dianneifenlei = (TextView)findViewById(R.id.tv_dianneifenlei);
         tv_shangpinbiaoqian = (TextView)findViewById(R.id.tv_shangpinbiaoqian);
         tv_taocan = (TextView)findViewById(R.id.tv_taocan);

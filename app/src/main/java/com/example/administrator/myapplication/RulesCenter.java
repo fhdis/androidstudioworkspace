@@ -11,5 +11,7 @@ public class RulesCenter extends AppCompatActivity {
         setContentView(R.layout.rules_center);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("规则中心");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
     }
 }

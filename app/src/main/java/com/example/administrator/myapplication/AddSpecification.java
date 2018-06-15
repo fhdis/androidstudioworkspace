@@ -11,5 +11,7 @@ public class AddSpecification extends AppCompatActivity {
         setContentView(R.layout.add_specification);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("多规格管理            保存");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_back);
     }
 }

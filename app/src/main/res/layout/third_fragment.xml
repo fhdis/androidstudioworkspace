@@ -29,6 +29,8 @@
             android:drawablePadding="3dp"
             android:gravity="center"
             android:text="店铺管理"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
             android:background="#FACF1C"
             />
     </LinearLayout>

@@ -11,5 +11,7 @@ public class AboutUs extends AppCompatActivity {
         setContentView(R.layout.about_us);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("食纷生活商家版");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
     }
 }

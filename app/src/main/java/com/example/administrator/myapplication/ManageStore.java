@@ -17,6 +17,8 @@ public class ManageStore extends AppCompatActivity {
         setContentView(R.layout.manage_store);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("门店");
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
         tx_yingyeshezhi = (TextView)findViewById(R.id.tx_yingyeshezhi);
         tx_jibenxinxi = (TextView)findViewById(R.id.tx_jibenxinxi);
         tx_renzhengzhongxin = (TextView)findViewById(R.id.tx_renzhengzhongxin);

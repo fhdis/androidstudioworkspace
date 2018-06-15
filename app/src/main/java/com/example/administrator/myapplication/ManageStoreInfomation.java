@@ -16,5 +16,7 @@ public class ManageStoreInfomation extends AppCompatActivity {
         setContentView(R.layout.manage_store_infomation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("基本信息");
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
     }
 }

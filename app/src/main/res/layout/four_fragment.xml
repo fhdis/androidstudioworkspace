@@ -19,6 +19,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="瑞乐林生鲜（暨阳中路店）"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
             android:background="#FACF1C"
             />
     </LinearLayout>

@@ -14,7 +14,18 @@ android:layout_height="match_parent">
     <android.support.v7.widget.Toolbar
         android:id= "@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FACF1C">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="全部商品"
+            android:textSize="22sp"
+            android:drawableRight="@mipmap/ic_menu_arrow_below"
+            android:drawablePadding="-120dp"
+            android:gravity="center"
+            android:layout_marginRight="100dp"
+            />
     </android.support.v7.widget.Toolbar>
 
 <LinearLayout

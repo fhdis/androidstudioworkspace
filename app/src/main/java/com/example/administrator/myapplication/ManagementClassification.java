@@ -17,6 +17,8 @@ public class ManagementClassification extends AppCompatActivity {
         setContentView(R.layout.management_classification);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("管理分类");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
         bianyione = (TextView)findViewById(R.id.bianyione);
         bianyitwo = (TextView)findViewById(R.id.bianyitwo);
         bianyithress = (TextView)findViewById(R.id.bianyithress);

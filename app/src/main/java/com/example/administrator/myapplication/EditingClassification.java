@@ -11,5 +11,7 @@ public class EditingClassification extends AppCompatActivity {
         setContentView(R.layout.edit_classification);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("编辑分类");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
     }
 }

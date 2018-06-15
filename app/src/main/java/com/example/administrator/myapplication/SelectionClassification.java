@@ -10,6 +10,8 @@ public class SelectionClassification extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selection_classification);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("选择商品分类            保存");
+        toolbar.setTitle("选择商品分类");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
     }
 }

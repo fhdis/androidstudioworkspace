@@ -46,7 +46,7 @@ public class ManageProduct extends AppCompatActivity {
         setContentView(R.layout.manage_product);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("全部商品");
+        //toolbar.setTitle("全部商品");
         //setSupportActionBar(toolbar);https://blog.csdn.net/zhaozhuzi/article/details/76280627
         toolbar.setNavigationIcon(R.mipmap.ic_menu_back);
         bt_manage_classify = (Button)findViewById(R.id.bt_manage_classify);

@@ -11,5 +11,7 @@ public class PackageSettings extends AppCompatActivity {
         setContentView(R.layout.package_setting);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("套餐设置");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
     }
 }

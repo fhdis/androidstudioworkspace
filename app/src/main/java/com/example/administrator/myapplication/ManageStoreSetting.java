@@ -16,5 +16,7 @@ public class ManageStoreSetting extends AppCompatActivity {
         setContentView(R.layout.manage_store_setting);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("营业设置");
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
     }
 }

@@ -16,5 +16,7 @@ public class ManageStoreCenter extends AppCompatActivity {
         setContentView(R.layout.manage_store_center);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("认证中心");
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
     }
 }

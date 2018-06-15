@@ -10,6 +10,8 @@ public class GoodsLabel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.goods_label);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("商品标签            保存");
+        toolbar.setTitle("商品标签");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorText));
+        toolbar.setNavigationIcon(R.mipmap.ic_menu_arrow_left);
     }
 }
