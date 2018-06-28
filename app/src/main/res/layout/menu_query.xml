@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -53,43 +54,16 @@
 
 
 
-    <RadioGroup
+    <com.example.administrator.myapplication.GroupButtonView
         android:id="@+id/tab_date"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:groupBtnCodeText="type_today#type_otherday"
+        app:groupBtnNameText="近两日#选择日期  Ⅴ"
+        android:gravity="center"
         android:background="#FACF1C"
         >
-        <RadioButton
-            android:layout_marginLeft="50dp"
-            android:id="@+id/btn_recent"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="近两日"
-            android:textSize="17.0sp"
-            android:textColor="@android:color/black"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:checked="true"
-            android:button="@null"
-            android:background="@drawable/radiogroup_shape"
-            />
-        <RadioButton
-            android:layout_marginRight="50dp"
-            android:id="@+id/btn_oneday"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="选择日期"
-            android:textSize="17.0sp"
-            android:textColor="@android:color/black"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableRight="@mipmap/buttonarrow"
-            android:background="@drawable/radiogroup_shape"
-            />
-    </RadioGroup>
+    </com.example.administrator.myapplication.GroupButtonView>
     <View
         android:id="@+id/div_tab_bar"
         android:layout_width="match_parent"

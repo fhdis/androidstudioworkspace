@@ -24,5 +24,9 @@
         <!-- 指定消失的动画xml -->
     </style>
 
-
+    <style name="TipDialog" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/testbackground</item>
+        <item name="android:background">@color/background</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
 </resources>

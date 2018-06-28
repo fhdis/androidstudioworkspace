@@ -39,4 +39,26 @@
         <!-- Inner padding between the bottom edge of the Card and children of the CardView. -->
         <attr name="contentPaddingBottom" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"></attr>
+    </declare-styleable>
+
+    <!-- GroupButtonView -->
+    <declare-styleable name="GroupButtonView">
+        <attr name="groupBtnNameText" format="string"></attr>
+        <attr name="groupBtnCodeText" format="string"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="ClickableListItem">
+        <attr name="text" format="string" />
+        <attr name="containIcon" format="boolean" />
+        <attr name="imgsrc" format="reference|color" />
+        <attr name="textColor" format="reference|color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="hasdivider" format="boolean" />
+    </declare-styleable>
+
 </resources>

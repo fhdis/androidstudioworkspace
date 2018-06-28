@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
    // private FirstFragment f1;
     private MenuDeal f1;
-    private MenuQuery f2;
+    //private MenuQuery f2;
+    private MenuQueryUpdate f2;
     private ThirdFragment f3;
     private FouthFragment f4;
 
@@ -107,7 +108,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 selected();
                 tabPoi.setSelected(true);
                 if(f2==null){
-                    f2 = new MenuQuery();
+                    //f2 = new MenuQuery();
+                    f2 = new MenuQueryUpdate();
                     transaction.add(R.id.fragment_container,f2);
                 }else{
                     transaction.show(f2);

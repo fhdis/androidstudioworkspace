@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -24,117 +22,84 @@
             android:background="#FACF1C"
             />
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+    <com.example.administrator.myapplication.ClickableListItem
+        android:id="@+id/tx_dayinji"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    app1:containIcon="true"
+    app1:imgsrc="@mipmap/printer"
+    app1:text="  打印机设置"
+    app1:textColor="@color/gray"
+    app1:textSize="16sp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
+        android:background="#d9d9d9"
+       />
+    <com.example.administrator.myapplication.ClickableListItem
+        android:id="@+id/tx_hujiaokefu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app1:containIcon="true"
+        app1:imgsrc="@mipmap/settings_tel"
+        app1:text="  呼叫客服"
+        app1:textColor="@color/gray"
+        app1:textSize="16sp"
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d9d9d9"
+            />
+    <com.example.administrator.myapplication.ClickableListItem
+        android:id="@+id/tx_guizezhongxin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app1:containIcon="true"
+        app1:imgsrc="@mipmap/settings_guize"
+        app1:text="  规则中心"
+        app1:textColor="@color/gray"
+        app1:textSize="16sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
         android:background="#d9d9d9"
         />
-
-    <LinearLayout
-        android:layout_marginTop="10dp"
+    <com.example.administrator.myapplication.ClickableListItem
+        android:id="@+id/tx_aboutus"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true">
-        <TextView
-            android:id="@+id/tx_dayinji"
-            android:drawableLeft="@mipmap/printer"
-            android:drawableRight="@mipmap/ic_menu_jiantou"
-            android:drawablePadding="90dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:gravity="center"
-            android:text="打印机设置"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:background="#d9d9d9"
-            />
-        <TextView
-            android:id="@+id/tx_hujiaokefu"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:drawableLeft="@mipmap/settings_tel"
-            android:drawableRight="@mipmap/ic_menu_jiantou"
-            android:drawablePadding="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="呼叫客服"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:background="#d9d9d9"
-            />
-        <TextView
-            android:id="@+id/tx_guizezhongxin"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:drawableLeft="@mipmap/settings_guize"
-            android:drawableRight="@mipmap/ic_menu_jiantou"
-            android:drawablePadding="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="规则中心"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:background="#d9d9d9"
-            />
-        <TextView
-            android:id="@+id/tx_aboutus"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:drawableLeft="@mipmap/settings_aboutus"
-            android:drawableRight="@mipmap/ic_menu_jiantou"
-            android:drawablePadding="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="关于我们"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:background="#d9d9d9"/>
+        android:layout_height="60dp"
+        app1:containIcon="true"
+        app1:imgsrc="@mipmap/settings_aboutus"
+        app1:text="  关于我们"
+        app1:textColor="@color/gray"
+        app1:textSize="16sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d9d9d9"
+        />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="230dp"
-      >
-        <TextView
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/login_button"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#d9d9d9"
-            />
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/yuanjiao_shape"
             android:text="退出登录"
-            android:gravity="center"
-            android:textStyle ="bold"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#d9d9d9"
-            />
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
     </LinearLayout>
 </LinearLayout>
-</ScrollView>

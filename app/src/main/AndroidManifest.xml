@@ -101,6 +101,9 @@
             android:name=".AddPrinter"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".CalendarUI"
+            android:theme="@style/TipDialog">
+        </activity>
     </application>
 
 </manifest>

@@ -18,10 +18,10 @@ import android.widget.TextView;
 public class FouthFragment extends Fragment {
     //private String context;
     //private TextView mTextView;
-    private TextView tx_dayinji;
-    private TextView tx_hujiaokefu;
-    private TextView tx_guizezhongxin;
-    private TextView tx_aboutus;
+    private com.example.administrator.myapplication.ClickableListItem tx_dayinji;
+    private com.example.administrator.myapplication.ClickableListItem tx_hujiaokefu;
+    private com.example.administrator.myapplication.ClickableListItem tx_guizezhongxin;
+    private com.example.administrator.myapplication.ClickableListItem tx_aboutus;
 
     private Dialog allMsg;
     // Dialog的布局View
@@ -38,11 +38,10 @@ public class FouthFragment extends Fragment {
         //mTextView = (TextView)view.findViewById(R.id.txt_content);
         //mTextView = (TextView)getActivity().findViewById(R.id.txt_content);
         //mTextView.setText(context);
-        tx_dayinji = (TextView)view.findViewById(R.id.tx_dayinji);
-        tx_hujiaokefu = (TextView)view.findViewById(R.id.tx_hujiaokefu);
-        tx_guizezhongxin = (TextView)view.findViewById(R.id.tx_guizezhongxin);
-        tx_aboutus = (TextView)view.findViewById(R.id.tx_aboutus);
-        Log.d("BBBB","FouthFragment="+"onCreateView");
+        tx_dayinji = (com.example.administrator.myapplication.ClickableListItem)view.findViewById(R.id.tx_dayinji);
+        tx_hujiaokefu = (com.example.administrator.myapplication.ClickableListItem)view.findViewById(R.id.tx_hujiaokefu);
+        tx_guizezhongxin = (com.example.administrator.myapplication.ClickableListItem)view.findViewById(R.id.tx_guizezhongxin);
+        tx_aboutus = (com.example.administrator.myapplication.ClickableListItem)view.findViewById(R.id.tx_aboutus);
         return view;
     }
 
@@ -50,7 +49,7 @@ public class FouthFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         init();
-        tx_dayinji.setOnClickListener(new View.OnClickListener() {
+          tx_dayinji.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(),PrinterSetting.class);
@@ -59,7 +58,7 @@ public class FouthFragment extends Fragment {
             }
         });
 
-        tx_hujiaokefu.setOnClickListener(new View.OnClickListener() {
+      tx_hujiaokefu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 show(view);

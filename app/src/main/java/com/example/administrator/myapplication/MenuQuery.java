@@ -41,8 +41,8 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
 
     private FrameLayout ly_content;
 
-    private RadioButton btn_recent;
-    private RadioButton btn_oneday;
+    //private RadioButton btn_recent;
+   // private RadioButton btn_oneday;
 
     //private AllOrder f1;
     private AllOrder allOrder;
@@ -61,6 +61,7 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
     // Dialog的布局View
     private View allMsgView;
     private Context thiscontext;
+    private GroupButtonView tab_date;
     public  MenuQuery(){
 
     }
@@ -74,8 +75,9 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
         txt_finish_order = (TextView)view.findViewById(R.id.txt_finish_order);
         txt_cancel_order = (TextView)view.findViewById(R.id.txt_cancel_order);
         ly_content = (FrameLayout)view.findViewById(R.id.fragment_container);
-        btn_recent = (RadioButton)view.findViewById(R.id.btn_recent);
-        btn_oneday = (RadioButton)view.findViewById(R.id.btn_oneday);
+        tab_date = (GroupButtonView)view.findViewById(R.id.tab_date);
+        //btn_recent = (RadioButton)view.findViewById(R.id.btn_recent);
+        //btn_oneday = (RadioButton)view.findViewById(R.id.btn_oneday);
         Log.d("BBBB","MenuQuery="+"onCreateView");
         thiscontext = view.getContext();
         init();
@@ -96,7 +98,18 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
         }
         Log.d("BBBB","MenuQuery="+"onActivityCreated");
         transaction1.commit();
-        btn_recent.setOnClickListener(new View.OnClickListener() {
+
+        tab_date.setOnGroupBtnClickListener(new GroupButtonView.OnGroupBtnClickListener() {
+            @Override
+            public void groupBtnClick(String code) {
+                if(code.equals("type_otherday")){
+                    Intent intent  = new Intent();
+                    intent.setClass(MenuQuery.this.getContext(), CalendarUI.class);
+                    startActivity(intent);
+                }
+            }
+        });
+       /* btn_recent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
@@ -116,7 +129,7 @@ public class MenuQuery extends Fragment implements View.OnClickListener{
             public void onClick(View view) {
                 show(view);
             }
-        });
+        });*/
     }
 
     //UI组件初始化与事件绑定
