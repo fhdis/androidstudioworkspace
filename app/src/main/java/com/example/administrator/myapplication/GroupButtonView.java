@@ -66,13 +66,13 @@ public class GroupButtonView extends LinearLayout {
         }
 
         for (int i = 0; i < btnCodeArr.length; i++) {
-
             //使用布局文件写方便
             RadioButton rb = (RadioButton) View.inflate(mContext, R.layout.view_item_group_radio_button, null);
 
             if (btnCodeArr.length == 2) {
                 if (i == 0) {
-                    String today;
+                    //近两日日期在点击按钮后，实时获取
+                   /* String today;
                     SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
                     Calendar calendar = Calendar.getInstance();
                     //today = sf.format(c.getTime());
@@ -80,7 +80,7 @@ public class GroupButtonView extends LinearLayout {
                             + calendar.get(Calendar.DAY_OF_MONTH) + "日";
                     rb.setId(0);
                     rb.setTag("type_today");
-                    rb.setText(today);
+                    rb.setText(today);*/
                     rb.setBackgroundResource(R.drawable.left_button_selector);
                     rb.setChecked(true);
                 } else if (i == 1) {
@@ -97,11 +97,11 @@ public class GroupButtonView extends LinearLayout {
                     rb.setBackgroundResource(R.drawable.mid_button_selector);
                 }
             }
-            if(i!=0) {
+           // if(i!=0) {
                 rb.setId(i);
                 rb.setTag(btnCodeArr[i]);
                 rb.setText(btnNameArr[i]);
-            }
+          // }
             mRg.addView(rb);
         }
     }

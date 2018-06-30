@@ -9,7 +9,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:groupBtnCodeText="type_today#type_otherday"
-            app:groupBtnNameText="6月12日#选择日期  Ⅴ"
+            app:groupBtnNameText="近两日#选择日期  Ⅴ"
             android:gravity="center"
             android:background="#FACF1C"
             >

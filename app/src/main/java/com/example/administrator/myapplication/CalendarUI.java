@@ -1,7 +1,9 @@
 package com.example.administrator.myapplication;
 
+import android.support.v7.app.AlertDialog;
+import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
@@ -13,21 +15,33 @@ import com.othershe.calendarview.listener.OnSingleChooseListener;
 import com.othershe.calendarview.utils.CalendarUtil;
 import com.othershe.calendarview.weiget.CalendarView;
 
-public class CalendarUI extends AppCompatActivity {
+public class CalendarUI extends AlertDialog implements View.OnClickListener {
 
     private CalendarView calendarView;
 
     private int[] cDate = CalendarUtil.getCurrentDate();
+    private int lastMonth = 3;
+    private int nextMonth = 3;
 
+    private Context thiscontext;
+    private OnEditInputFinishedListener mListener; //接口
+
+    protected CalendarUI(Context context, OnEditInputFinishedListener mListener) {
+        super(context);
+        //thiscontext = context;
+        this.mListener = mListener;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //getSupportActionBar().hide();
         setContentView(R.layout.calendar);
-        WindowManager m = getWindowManager();
+        //WindowManager m = getWindowManager();
+        WindowManager m = (WindowManager) getContext().getApplicationContext()
+                .getSystemService(Context.WINDOW_SERVICE);
         Display d = m.getDefaultDisplay();  //为获取屏幕宽、高
         WindowManager.LayoutParams p = getWindow().getAttributes();  //获取对话框当前的参数值
-        p.height = (int) (d.getHeight() * 0.5);   //高度设置为屏幕的1.0
+        p.height = (int) (d.getHeight() * 0.6);   //高度设置为屏幕的1.0
         p.width = (int) (d.getWidth() );    //宽度设置为屏幕的0.8
         p.alpha = 1.0f;      //设置本身透明度
         // p.dimAmount = 0.0f;      //设置黑暗度
@@ -56,10 +70,39 @@ public class CalendarUI extends AppCompatActivity {
             @Override
             public void onSingleChoose(View view, DateBean date) {
                 title.setText(date.getSolar()[0] + "年" + date.getSolar()[1] + "月");
-
+                Log.d("test","choose"+date.getSolar()[0] + date.getSolar()[1] +date.getSolar()[2]);
+                if (mListener != null) {
+                    String choosetime = ""+date.getSolar()[0] + " "+date.getSolar()[1] +" "+date.getSolar()[2];
+                    mListener.editInputFinished(choosetime);
+                }
+                dismiss();
             }
         });
     }
 
+    public void lastMonth(View view) {
+        if(lastMonth==0){
+            return;
+        }
+        calendarView.lastMonth();
+        lastMonth--;
+    }
+
+    public void nextMonth(View view) {
+        if(nextMonth==0){
+            return;
+        }
+        calendarView.nextMonth();
+        nextMonth--;
+    }
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    public interface OnEditInputFinishedListener{
+        void editInputFinished(String password);
+    }
 }
 

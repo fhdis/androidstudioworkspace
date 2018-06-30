@@ -18,6 +18,14 @@ import android.widget.TextView;
 import android.util.Log;
 import android.app.AlertDialog;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class AllOrder extends Fragment implements View.OnClickListener{
     private String today;
     private String yesterday;
@@ -58,7 +66,16 @@ public class AllOrder extends Fragment implements View.OnClickListener{
         btn_order_product_details = (Button)view.findViewById(R.id.btn_order_product_details);
         btn_order_express_progress = (Button)view.findViewById(R.id.btn_order_express_progress);
         init();
+        if(!EventBus.getDefault().isRegistered(this)){//加上判断
+            EventBus.getDefault().register(this);
+        }
         return view;
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void userEventBus(MessageEvent messageEvent){
+        tv_today.setText(messageEvent.today);
+        tv_yesterday.setText(messageEvent.yesterday);
     }
 
     @Override
@@ -66,6 +83,17 @@ public class AllOrder extends Fragment implements View.OnClickListener{
         super.onActivityCreated(savedInstanceState);
         //tv_yesterday.setText(yesterday);
         //tv_today.setText(today);
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar calendar = Calendar.getInstance();
+        today = (calendar.get(Calendar.MONTH)+1) + "月"//从0计算
+                + calendar.get(Calendar.DAY_OF_MONTH) + "日";
+        calendar.add( Calendar. DATE, -1);
+        yesterday = (calendar.get(Calendar.MONTH)+1) + "月"//从0计算
+                + calendar.get(Calendar.DAY_OF_MONTH) + "日";
+
+        tv_today.setText(today);
+        tv_yesterday.setText(yesterday);
+
         btn_order_express_progress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,8 +110,7 @@ public class AllOrder extends Fragment implements View.OnClickListener{
     }
 
 
-    private void init()
-    {
+    private void init() {
         // 通过LayoutInflater找到改布局
         allMsgView = (RelativeLayout) LayoutInflater.from(thiscontext).inflate(R.layout.dialog_express, null);
         // 创建Dialog
@@ -101,24 +128,25 @@ public class AllOrder extends Fragment implements View.OnClickListener{
                 android.R.layout.simple_list_item_1, strDatas));
     }
 
-    public void show(View v)
-    {
+    public void show(View v) {
         // 两句的顺序不能调换
         allMsg.show();
         allMsg.getWindow().setContentView((RelativeLayout) allMsgView);
     }
+
+    @Override
+    public void onDestroy() {
+        // TODO Auto-generated method stub
+        if (EventBus.getDefault().isRegistered(this))//加上判断
+            EventBus.getDefault().unregister(this);
+        super.onDestroy();
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         // TODO Auto-generated method stub
-        if( resultCode != Activity.RESULT_OK)
-            return ;
-        if( requestCode == MenuQuery.requestCode)
-        {
-            Bundle bundle = data.getExtras();
-            today = bundle.getString("today");
-            yesterday =  bundle.getString("yesterday");
-            Log.d("AAAAA","11111today="+today);
-            Log.d("AAAAA","22222today="+yesterday);
-        }
     }
+
+
+
 }

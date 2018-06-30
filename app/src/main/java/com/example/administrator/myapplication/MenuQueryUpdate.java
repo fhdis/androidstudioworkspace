@@ -9,6 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
+import org.greenrobot.eventbus.EventBus;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MenuQueryUpdate extends Fragment {
     private GroupButtonView gbv_day;
@@ -43,6 +52,15 @@ public class MenuQueryUpdate extends Fragment {
         two = mTabLayout.getTabAt(1);
         three = mTabLayout.getTabAt(2);
         four = mTabLayout.getTabAt(3);
+
+        String today;
+        String yesterday;
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar calendar = Calendar.getInstance();
+        today = (calendar.get(Calendar.MONTH)+1) + "月"//从0计算
+                + calendar.get(Calendar.DAY_OF_MONTH) + "日";
+        //yesterday = getOldDate(1);
+        //EventBus.getDefault().post(new MessageEvent(today, yesterday));
         gbv_day.setOnGroupBtnClickListener(new GroupButtonView.OnGroupBtnClickListener() {
             @Override
             public void groupBtnClick(String code) {
@@ -51,8 +69,46 @@ public class MenuQueryUpdate extends Fragment {
                     intent.setClass(MenuQueryUpdate.this.getContext(), CalendarUI.class);
                     startActivity(intent);
                 }
+               /* if(code.equals("type_today")){
+                    String today;
+                    String yesterday;
+                    SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
+                    Calendar calendar = Calendar.getInstance();
+                    today = (calendar.get(Calendar.MONTH)+1) + "月"//从0计算
+                            + calendar.get(Calendar.DAY_OF_MONTH) + "日";
+                    yesterday = getOldDate(1);
+                    EventBus.getDefault().post(new MessageEvent(today, yesterday));
+                }*/
+            }
+        });
+
+        gbv_day.mRg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup rg, int i) {
+                //RadioButton rb = (RadioButton)rg.findViewById(i);
+                /*if (rb.isChecked()) {
+
+                }*/
+                if(i==1){
+                    final RadioButton rb = (RadioButton)rg.findViewById(1);
+                    /*Intent intent  = new Intent();
+                    intent.setClass(MenuQueryUpdate.this.getContext(), CalendarUI.class);
+                    startActivity(intent);*/
+                    CalendarUI dialog = new CalendarUI(getContext(), new CalendarUI.OnEditInputFinishedListener(){
+                        @Override
+                        public void editInputFinished(String password) {
+                            //tvPasswordResul.setText(password);
+                            rb.setText(password);
+                        }
+                    });
+
+                    dialog.setView(new EditText(getContext()));  //若对话框无法弹出输入法，加上这句话
+                    dialog.show();
+                }
             }
         });
     }
+
+
 
 }

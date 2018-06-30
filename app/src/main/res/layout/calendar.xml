@@ -13,7 +13,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginLeft="50dp"
-            android:background="@mipmap/ic_menu_left"
+            android:background="@mipmap/ic_menu_arrow_left"
             android:onClick="lastMonth" />
 
         <TextView
@@ -41,9 +41,11 @@
         android:id="@+id/calendar"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        calendarview:show_last_next="true"
-        calendarview:choose_type="multi"
+        calendarview:choose_type="single"
+        calendarview:show_holiday="false"
         calendarview:show_lunar="false"
-        calendarview:choose_color="#F9CE1B"
+        calendarview:show_term="false"
+        calendarview:switch_choose="false"
+
         />
 </LinearLayout>
